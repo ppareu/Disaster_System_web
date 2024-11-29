@@ -1,0 +1,242 @@
+/* 기본 폰트와 배경 설정 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* 네비게이션 바 설정 */
+header {
+  background-color: #ff3b3b;
+  color: white;
+  padding: 20px 20px;
+  text-align: right;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h2 {
+  color: #333;
+}
+
+/* main 설정 */
+main {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+section#post {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열 레이아웃 */
+  grid-gap: 20px; /* 그리드 아이템 간격 */
+}
+
+section#post > div {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ff3b3b;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+a:hover {
+  background-color: #f07c2e;
+}
+
+#earthquake-info p {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#earthquake-info span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#map {
+  height: 350px;
+  border-radius: 5px;
+}
+
+/* 미세먼지 현황 섹션 스타일 */
+.micro-matter {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.micro-matter h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.micro-matter label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.micro-matter select {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.micro-matter #matter {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.micro-matter #matter p {
+  margin: 5px 0;
+}
+
+/* 미세먼지 농도에 따른 배경색 설정 */
+.matter-good {
+  background-color: #8fbc8f; /* 초록색 */
+  color: white;
+}
+
+.matter-moderate {
+  background-color: #ffd700; /* 노란색 */
+  color: black;
+}
+
+.matter-unhealthy {
+  background-color: #ff8c00; /* 주황색 */
+  color: white;
+}
+
+.matter-very-unhealthy {
+  background-color: #ff4500; /* 빨간색 */
+  color: white;
+}
+
+.matter-hazardous {
+  background-color: #8b0000; /* 어두운 빨간색 */
+  color: white;
+}
+
+.auth-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.auth-container span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.auth-container button {
+  padding: 5px 10px;
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-container button:hover {
+  background-color: #f07c2e;
+}
+
+/* 차트 부분 스타일 */
+.matter-chart {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  grid-column: span 2; /* 그리드 레이아웃에서 두 열을 차지 */
+}
+
+.matter-chart canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* 미세먼지 검색 부분 스타일 */
+.matter-search {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  grid-column: span 3; /* 그리드 레이아웃에서 세 열을 차지 */
+}
+
+.matter-search h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.matter-search label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.matter-search input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.matter-search button {
+  padding: 10px 20px;
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.matter-search button:hover {
+  background-color: #f07c2e;
+}
+
+.matter-search #searchResults {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+}
+
+.matter-search #searchResults p {
+  margin: 5px 0;
+}

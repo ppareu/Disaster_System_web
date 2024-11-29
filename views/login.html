@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 시스템</title>
+    <link rel="stylesheet" href="/login.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/iotclient">IoTClient</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <form id="login-form">
+          <h2>로그인</h2>
+          <label for="username">아이디</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="아이디를 입력하세요"
+          />
+          <label for="password">비밀번호</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 입력하세요"
+          />
+          <button type="submit">로그인</button>
+          <p>
+            계정이 없으신가요? <a href="#signup" id="show-signup">회원가입</a>
+          </p>
+        </form>
+
+        <form id="signup-form" style="display: none">
+          <h2>회원가입</h2>
+          <label for="new-username">아이디</label>
+          <input
+            type="text"
+            id="new-username"
+            name="new-username"
+            placeholder="아이디를 입력하세요"
+          />
+          <label for="new-password">비밀번호</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            placeholder="비밀번호를 입력하세요"
+          />
+          <label for="phone">전화번호</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="전화번호를 입력하세요"
+          />
+          <label for="birthdate">생년월일</label>
+          <input type="date" id="birthdate" name="birthdate" />
+          <label for="location">주소</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="주소를 입력하세요"
+          />
+          <button type="submit">회원가입</button>
+          <p>이미 계정이 있으신가요? <a href="/" id="show-login">로그인</a></p>
+        </form>
+      </div>
+    </main>
+
+    <script src="/login.js"></script>
+  </body>
+</html>

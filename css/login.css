@@ -1,0 +1,105 @@
+/* 기본 폰트와 배경 설정 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 네비게이션 바 설정 */
+header {
+  background-color: #ff3b3b;
+  color: white;
+  padding: 20px 20px;
+  text-align: right;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+/* main 설정 */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.form-container {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff3b3b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #e22e2e;
+}
+
+p {
+  margin: 10px 0 0;
+}
+
+a {
+  color: #ff3b3b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

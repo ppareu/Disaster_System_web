@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지진 재난 관리 시스템</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=지도 API KEY"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/community">Community</a></li>
+          <li><a href="/iotclient">IoTClient</a></li>
+          <li id="auth-item" class="auth-container"></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="post">
+        <div class="alert">
+          <h2>재난 상황</h2>
+          <div id="earthquake-info"></div>
+        </div>
+
+        <div class="local">
+          <h2>재난 지도</h2>
+          <div id="map"></div>
+        </div>
+
+        <div class="contacts">
+          <h2>재난 대응 가이드</h2>
+          <p>국민재난안전포털</p>
+          <a href="https://m.safekorea.go.kr/idsiSFK/neo/main_m/main.html">
+            이동
+          </a>
+
+          <p>부산 비상연락망</p>
+          <p>경찰 : 112</p>
+          <a href="https://www.bspolice.go.kr/kor/main.do"> 이동 </a>
+
+          <p>소방 : 119</p>
+          <a href="https://119.busan.go.kr/index"> 이동 </a>
+        </div>
+
+        <div class="micro-matter">
+          <h2>미세먼지 현황</h2>
+          <label for="sidoSelect">시도 선택:</label>
+          <select id="sidoSelect" onchange="getMatterData()">
+            <option value="부산">부산</option>
+            <option value="서울">서울</option>
+            <option value="대구">대구</option>
+            <option value="인천">인천</option>
+            <option value="광주">광주</option>
+            <option value="대전">대전</option>
+            <option value="울산">울산</option>
+            <option value="경기">경기</option>
+            <option value="강원">강원</option>
+            <option value="충북">충북</option>
+            <option value="충남">충남</option>
+            <option value="전북">전북</option>
+            <option value="전남">전남</option>
+            <option value="경북">경북</option>
+            <option value="경남">경남</option>
+            <option value="제주">제주</option>
+            <option value="세종">세종</option>
+          </select>
+          <div id="matter"></div>
+        </div>
+
+        <div class="matter-chart">
+          <canvas id="airQualityChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="matter-search">
+          <h2>미세먼지 기록 검색</h2>
+          <label for="startDate">시작 날짜:</label>
+          <input type="date" id="startDate" name="startDate" />
+          <br />
+          <label for="startTime">시작 시간:</label>
+          <input type="time" id="startTime" name="startTime" />
+          <br />
+          <label for="endDate">종료 날짜:</label>
+          <input type="date" id="endDate" name="endDate" />
+          <br />
+          <label for="endTime">종료 시간:</label>
+          <input type="time" id="endTime" name="endTime" />
+          <br />
+          <button id="searchButton">검색</button>
+          <div
+            id="searchResults"
+            style="max-height: 200px; overflow-y: scroll"
+          ></div>
+        </div>
+      </section>
+    </main>
+    <script src="/main.js"></script>
+  </body>
+</html>
